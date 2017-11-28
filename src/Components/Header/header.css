@@ -1,0 +1,20 @@
+
+ .headerContainer{
+    background: black; 
+    height: 46px;
+    padding-top:10px;
+ }
+ .linkContainer{
+    margin: auto;
+    font-size: 25px; 
+    display: flex;
+    justify-content:space-between;    
+    max-width: 700px;   
+ }
+ .link{
+     color: white;
+     text-decoration: none
+ }
+ .link:hover {
+    color: #00F
+ }

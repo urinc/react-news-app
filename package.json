@@ -1,0 +1,32 @@
+{
+  "name": "041817",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tinymce/tinymce-react": "^2.0.3",
+    "combine-reducers": "^1.0.0",
+    "firebase": "^3.9.0",
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-datepicker": "^0.46.0",
+    "react-day-picker": "^6.2.1",
+    "react-disqus-comments": "^0.5.2",
+    "react-dom": "^15.5.4",
+    "react-firebase": "^2.2.6",
+    "react-redux": "5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

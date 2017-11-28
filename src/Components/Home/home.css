@@ -1,0 +1,8 @@
+.homeContiner{
+    max-width:1200px;
+    margin:auto;
+}
+.homeContiner .list{      
+    float: left;
+  
+}

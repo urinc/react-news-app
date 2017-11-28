@@ -1,0 +1,12 @@
+.blogContainer{
+    max-width:1200px;
+    margin:auto;
+}
+
+.blogContainer .list{      
+    float: left;  
+    width: 860px;
+    margin-top:30px;
+}
+
+

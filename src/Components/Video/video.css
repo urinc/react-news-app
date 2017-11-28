@@ -1,0 +1,12 @@
+.videoContainer{
+    max-width:1200px;
+    margin:auto;
+}
+
+.videoContainer .list{      
+    float: left; 
+    width: 860px;
+    margin-top:30px
+}
+
+
