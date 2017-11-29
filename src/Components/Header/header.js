@@ -34,7 +34,7 @@ export class Header extends Component {
   }
 
   sections = [this.home, this.news, this.video, this.blogs, this.calendar, this.add]
-  stR = { color: 'red' }
+
   linkColor = { color: 'white' };
   activeLinkColor = { color: 'blue' };
 

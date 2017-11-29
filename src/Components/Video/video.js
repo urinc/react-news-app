@@ -3,8 +3,9 @@ import List from '../List/list';
 import { getItems } from '../../Actions/itemActionCreater';
 import SidePanel from '../../Containers/SidePanel/sidePanel';
 import './video.css'
+import { setTimeout } from 'timers';
 
-class Video extends Component {   
+class Video extends Component {
     cssClass = 'square';
 
     filter(arr) {
@@ -17,13 +18,15 @@ class Video extends Component {
             })
     }
 
+    
     render() {
+
         return (
             <div className='videoContainer'>
-                <div className='list'>
+                <div className='list' >                  
                     <List
                         filter={this.filter}
-                        getItems={  () => getItems('video') }
+                        getItems={() => getItems('video')}
                         cssClass={this.cssClass} />
                 </div>
                 <div className='sidePanel'>
