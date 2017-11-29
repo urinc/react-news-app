@@ -26,8 +26,7 @@ export class Header extends Component {
   calendar = {
     path: '/calendar',
     name: 'CALENDAR'
-  }
-  
+  }  
   add = {
     path: '/add',
     name: 'ADD'
