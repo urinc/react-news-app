@@ -5,7 +5,7 @@ import './item.css';
 export const Item = ({ item, cssClass }) => {
 
   return (
-    
+
     <div className={cssClass}>
       <div className="itemContainer">
         <div className="container">
@@ -16,15 +16,17 @@ export const Item = ({ item, cssClass }) => {
             <div className="text"> Time to read: {Math.ceil(
               item.body.split(' ').length / 80)}  min </div>
           </div>
+          <div className='category'>
+            {item.category}
+          </div>
         </div>
-        <div className='category'>
-          {item.category}
-        </div>
-        <div className='title'>
-          <Link to={'/item/' + item.id}>
+        <Link to={'/item/' + item.id}>
+          <div className='title'>
             {item.title}
-          </Link>
-        </div>
+          </div>
+
+        </Link>
+
         <div className="metrics">
           <div className='dateStamp'>
             {new Date(item.date).toLocaleString('ru')}

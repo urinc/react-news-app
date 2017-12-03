@@ -3,7 +3,6 @@ import List from '../List/list';
 import { getItems } from '../../Actions/itemActionCreater';
 import SidePanel from '../../Containers/SidePanel/sidePanel';
 import './video.css'
-import { setTimeout } from 'timers';
 
 class Video extends Component {
     cssClass = 'square';
@@ -17,9 +16,7 @@ class Video extends Component {
                 else return false;
             })
     }
-
-    
-    render() {
+        render() {
 
         return (
             <div className='videoContainer'>

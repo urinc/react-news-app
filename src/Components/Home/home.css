@@ -4,5 +4,13 @@
 }
 .homeContiner .list{      
     float: left;
+    margin-top: 30px
   
 }
+
+@media screen and (max-width: 960px){
+    .showcaseContainer{
+    display: none;
+  }
+}
+ 

@@ -18,3 +18,19 @@
  .link:hover {
     color: #00F
  }
+
+
+ @media screen and (max-width: 960px){
+    .headerContainer{
+        background: black; 
+        height: 40px;
+        padding-top:15px;
+        font-weight: 600
+  
+     }
+     .linkContainer{
+        font-size: 14px; 
+        justify-content:space-around;            
+     }
+}
+ 

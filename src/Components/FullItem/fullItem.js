@@ -8,20 +8,20 @@ import ReactDisqusComments from 'react-disqus-comments';
 
 export class FullItem extends Component {
     componentDidMount() {
-        
+
         this.refs.body.innerHTML =
             this.props.item.body//.split(' ', 36).join(' ') + ' ...';
     }
 
-      getIdentifier(){
-           let ident = "item/" + this.props.id
-           console.log(ident)
-          return ident;
-      }
+    getIdentifier() {
+        let ident = "item/" + this.props.id
+        console.log(ident)
+        return ident;
+    }
 
 
     render() {
-    
+
         return (
 
             <div className="fullItemContainer">
@@ -48,11 +48,11 @@ export class FullItem extends Component {
                 </div>
 
                 <ReactDisqusComments
-                shortname="break-news"
-                identifier={"item/" +this.props.item.id}
-                url="http://news-break.ml/newsApp/#"
-               
-                onNewComment={this.handleNewComment}/>
+                    shortname="break-news"
+                    identifier={"item/" + this.props.item.id}
+                    url="http://news-break.ml/newsApp/#"
+
+                    onNewComment={this.handleNewComment} />
 
             </div>
         )

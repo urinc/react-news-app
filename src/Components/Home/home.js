@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
 import List from '../../Components/List/list';
-import  Showcase  from '../../Containers/Showcase/showcase';
+import Showcase from '../../Containers/Showcase/showcase';
 import SidePanel from '../../Containers/SidePanel/sidePanel';
 import { getRangeItems } from '../../Actions/itemActionCreater';
 
 import './home.css'
 
 class Home extends Component {
+  arr = [];
 
   filter(arr) {
-   return arr.slice(0, arr.length - 5)
+  //  this.arr = arr;
+    return arr.slice(0, arr.length - 5)
   }
 
-  render() {    
+  render() {
     return (
       <div className='homeContiner'>
         <div className='showcaseContainer'>
           <Showcase />
         </div>
-      <div className='list'>
+        <div className='list'>
           <List
-            filter={this.filter}        
+            filter={this.filter}
             getItems={getRangeItems}
-            cssClass='rectangle'          
+            cssClass='rectangle'
           />
         </div>
         <div className='sidePanel'>
-        <SidePanel />
+            <SidePanel />
         </div>
       </div>
     );

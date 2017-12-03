@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-
 import { Header} from '../Components/Header/header';
 import Home from '../Components/Home/home';
 import Video from '../Components/Video/video';

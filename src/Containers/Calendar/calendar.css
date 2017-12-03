@@ -8,3 +8,22 @@
     margin : 10px
     
 }
+
+@media screen and (max-width: 960px) {
+    .calendarContainer{             
+        margin: auto;
+    }
+    
+.calendarContainer span{  
+    margin: 0px;  
+    display: block;
+}
+
+
+.calendarContainer button{    
+    display: block;
+    margin: 5px auto
+}
+
+}
+

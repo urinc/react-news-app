@@ -10,3 +10,8 @@
 }
 
 
+@media screen and (max-width: 960px) {
+    .videoContainer .list{      
+        width: 100%
+    }
+}

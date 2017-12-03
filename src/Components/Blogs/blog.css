@@ -10,3 +10,9 @@
 }
 
 
+@media screen and (max-width: 960px) {
+    .blogContainer .list{      
+        width: 100%;
+      
+    }
+}

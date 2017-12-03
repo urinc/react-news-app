@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Editor } from '@tinymce/tinymce-react';
 import { addArticle } from '../../Store/FireBase/fireBase';
+import './add.css'
 class Add extends Component {
-   
+
     state = {
         title: '',
         avatarsName: '',
@@ -13,7 +14,7 @@ class Add extends Component {
         body: ''
     }
 
-    arcticleBuilder = ()=>{ 
+    arcticleBuilder = () => {
         let s = this.state
         let date = Date.now()
         let article = {
@@ -27,16 +28,12 @@ class Add extends Component {
             title: s.title,
             videoUrl: s.videoUrl || 'none',
             viewable: true
-
         }
-
-
         return article;
     }
 
 
     handleChange = ({ target }) => {
-
         let { type, value } = target;
         if (type === 'setupeditor') {
             let b = target.getContent();
@@ -49,23 +46,9 @@ class Add extends Component {
         this.setState({ [target.name]: target.value })
     }
 
-    divStyle = {
-        maxWidth: '900px',
-        margin: 'auto',
-        fontSize: '20px'
-
-    }
-    inputStyle = {
-        width: '100%',
-        fontSize: '16px',
-        margin: '5px'
-
-    }
-
-
     render() {
-      
-        return <div style={this.divStyle}>
+
+        return <div  className='addContainer' >
             <h2>Add new article</h2>
             <form>
                 <div>
@@ -85,20 +68,19 @@ class Add extends Component {
                         Avatar source:
                     <input
                             onChange={this.handleChange}
-                            style={this.inputStyle}
+                            
                             type="text"
                             name="avatarsName"
                             placeholder='Avatar source'
                         />
                     </label>
-
                 </div>
                 <div>
                     <label>
                         Autor's name:
                     <input
                             onChange={this.handleChange}
-                            style={this.inputStyle}
+                            
                             type="text"
                             name="autorsName"
                             placeholder="Autor's name"
@@ -111,7 +93,7 @@ class Add extends Component {
                         Video UrL:
                     <input
                             onChange={this.handleChange}
-                            style={this.inputStyle}
+                          
                             type="text"
                             name="videoUrl"
                             placeholder="Video URL"
@@ -140,22 +122,13 @@ class Add extends Component {
                     }}
                     onChange={this.handleChange}
                 />
-
             </form>
             <button onClick={() =>
-             addArticle(this.arcticleBuilder())
-             //console.log(this.arcticleBuilder())
-             
-             }>Post</button>
-
+                addArticle(this.arcticleBuilder())              
+            }>Post</button>
         </div>
-
     }
-
-
 }
-
-
 
 export default connect(
     (state) => ({
