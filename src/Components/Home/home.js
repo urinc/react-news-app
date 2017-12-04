@@ -10,7 +10,6 @@ class Home extends Component {
   arr = [];
 
   filter(arr) {
-  //  this.arr = arr;
     return arr.slice(0, arr.length - 5)
   }
 

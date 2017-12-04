@@ -240,6 +240,10 @@
     .rectangle .itemContainer .intro {
         display: none
     }
+    .rectangle .itemContainer{
+      margin-left:5px;
+    }
+
     .rectangle .itemContainer .title {
         color:black;
         font-size: 12px;

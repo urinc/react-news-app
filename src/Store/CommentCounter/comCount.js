@@ -2,14 +2,14 @@ import { store } from '../store'
 import { commentActionCreator } from '../../Actions/itemActionCreater';
 
 export const comCounter = function (state) {
-    disqWidgetCreate();
+   disqWidgetCreate();
     let ar = state.items;
     for (let i = 0; i < ar.length; i++) {
         if (ar[i] && ar[i].commentCounter === undefined) {
             ar[i].commentCounter = 0;
             addScriptCounter(i);
         }
-    }
+    } 
 }
 
 function createComment(comment) {
@@ -18,17 +18,16 @@ function createComment(comment) {
     store.dispatch(commentActionCreator(id, counter));
 }
 
-function addScriptCounter(id) {
-    let parent = document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0];
+function addScriptCounter(id) {   
     let script = document.createElement('script');
     script.src = `https://break-news.disqus.com/count-data.js?1=item/` + id;
     script.async = true;
     script.type = 'text/javascript';
-    parent.appendChild(script);
+    document.head.appendChild(script);     
 }
 
 function disqWidgetCreate() {
-    if (!window.DISQUSWIDGETS) {
+    if (!window.DISQUSWIDGETS) {       
         window.DISQUSWIDGETS = {};
         window.DISQUSWIDGETS.displayCount = function (response) {
             if (response.counts.length > 0) {
